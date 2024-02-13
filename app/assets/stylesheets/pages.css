@@ -30,16 +30,16 @@
 }
 
 .c-li:hover {
-  background-color: #b8b5b5;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
-  color: white;
 }
 
 .c-info {
   display: flex;
+  width: 100%;
   align-items: center;
   text-align: right;
-  gap: 90%;
+  justify-content: space-between;
 }
 
 .c-img {
@@ -71,4 +71,8 @@
   background-color: var(--green);
   border: 1px solid white;
   cursor: pointer;
+}
+
+.green-btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     root "users#index", as: :unauthenticated_root
   end
 
-  resources :groups, only: [:index, :new, :create, :show]
+  resources :groups, only: [:index, :new, :create] do  
+    resources :entities, only: [:index, :new, :create] 
+  end
 
   # Defines the root path route ("/")
   # root "posts#index"
