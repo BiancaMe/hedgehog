@@ -11,10 +11,10 @@
   <h2>Create new category</h2>
   <%= form_with(model: @group, local: true, html: {class: 'form'}) do |f| %>
     <div class="field">
-    <%= f.text_field :name, autofocus: true, class: 'field-s',placeholder: 'Full Name', autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, class: 'field-s',placeholder: 'Full Name', autocomplete: "name", required: true %>
     </div>
     <div class="field">
-    <%= f.text_field :icon, autofocus: true, class: 'field-s',placeholder: 'Icon URL', autocomplete: "icon" %>
+    <%= f.text_field :icon, autofocus: true, class: 'field-s',placeholder: 'Icon URL', autocomplete: "icon", required: true %>
     </div>
     <div class='s-actions'>
       <div class="actions">

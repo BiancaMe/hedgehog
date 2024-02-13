@@ -1,7 +1,7 @@
 <section class='page'>
   <nav class="navbar">
     <ul class='s-ul'>
-      <li><p><%= link_to authenticated_root_path do %><p class='back'>&#x2039;</p><% end %></p></li>
+      <li><p><%= link_to group_entities_path(@group) do %><p class='back'>&#x2039;</p><% end %></p></li>
       <li><p>Transaction</p> </li>
       <li>
         <%= button_to "Out", destroy_user_session_path, method: :delete, class: "btn-out" %>
@@ -16,8 +16,8 @@
     <div class="field">
     <%= f.number_field :amount, autofocus: true, class: 'field-s',placeholder: 'Amount', autocomplete: "amount", required: true %>
     </div>
-    <select aria-label="Default select example" name="category_id" class='field-s'>
-        <option selected >--Select Category--</option>
+    <select aria-label="Default select example" name="category_id" class='field-s' required= true>
+        <option selected value='0' >--Select Category--</option>
         <% @groups.each do |g| %>
                <option value="<%= g.id %>"><%= g.name %></option>
         <% end %>
@@ -29,4 +29,11 @@
       </div>
     </div>
   <% end %>
+  <% if flash[:error] %>
+  <div class="alert alert-danger">
+    <% flash[:error].each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </div>
+<% end %>
 </section>
