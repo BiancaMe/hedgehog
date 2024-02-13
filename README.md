@@ -79,8 +79,8 @@ LIVE DEMO
 > To get a local copy of the project, use this link:
 > 
 ```sh
-cd Rails-Capstone-Budget
-https://github.com/BiancaMe/hedgehog.git
+git clone https://github.com/BiancaMe/hedgehog.git
+cd hedgehog
 ```
 
 <!-- SETUP -->
