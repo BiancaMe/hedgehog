@@ -7,7 +7,7 @@
     </ul>
   </nav>
 
-    <%= form_for(resource, as: resource_name, :html => {:class => 'form-session'}, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, :html => {:class => 'form'}, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.email_field :email, class: 'field-s',placeholder: 'Email', autofocus: true, autocomplete: "email" %>
       </div>

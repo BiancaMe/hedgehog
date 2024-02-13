@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
-  has_many :transactions, class_name: 'Entity', foreign_key: :transaction_id
-  has_many :categories, class_name: 'Group', foreign_key: :category_id
+  has_many :entites, class_name: 'Entity', foreign_key:  :author_id
+  has_many :groups, class_name: 'Group', foreign_key:  :author_id
 
   validates :name, presence: true
 end
