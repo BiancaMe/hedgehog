@@ -4,7 +4,7 @@
 
  <!-- LOGO -->
 
-  <img src="./app/assets/images/app.jpg" alt="app-home" width="300"  height="auto" />
+  <img src="./app/assets/images/app.JPG" alt="app-home" width="300"  height="auto" />
   <br/>
 
 <!-- MAIN HEADING -->
