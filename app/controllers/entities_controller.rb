@@ -12,17 +12,17 @@ class EntitiesController < ApplicationController
 
   def create
     @group = Group.find(params[:group_id])
-    if params[:category_id] == '0' then
-        redirect_to new_group_entity_path(@group), notice: 'Category Not selected. Transaction not created'
+    if params[:category_id] == '0'
+      redirect_to new_group_entity_path(@group), notice: 'Category Not selected. Transaction not created'
     else
-        @category = Group.find(params[:category_id])
-        @entity = @category.entities.build(entity_params.merge(author_id: current_user.id, category: @category))
+      @category = Group.find(params[:category_id])
+      @entity = @category.entities.build(entity_params.merge(author_id: current_user.id, category: @category))
 
-        if @entity.save
+      if @entity.save
         redirect_to group_entities_path(@category), notice: 'Entity was successfully created.'
-        else
+      else
         render :new, notice: 'Entity Not created.'
-        end
+      end
     end
   end
 
