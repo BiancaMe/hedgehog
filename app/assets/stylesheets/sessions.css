@@ -1,4 +1,5 @@
-.session {
+.session,
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +34,7 @@
 }
 
 /* --- Session form --- */
-.form-session {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -7,7 +7,7 @@
     </ul>
   </nav>
 
-  <%= form_for(resource, as: resource_name, :html => {:class => 'form-session'}, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, :html => {:class => 'form'}, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
       <%= f.text_field :name, autofocus: true, class: 'field-s',placeholder: 'Full Name', autocomplete: "name" %>
